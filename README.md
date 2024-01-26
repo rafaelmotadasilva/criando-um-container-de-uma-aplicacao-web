@@ -15,8 +15,7 @@ Este é um exemplo simples de Docker Compose, no entanto, há muitas opções qu
 
 ```
 version: '3.9'
-volumes:
-  htdocs:
+
 services:
   app:
     image: httpd:latest
@@ -25,7 +24,7 @@ services:
     ports:
     - '80:80'
     volumes:
-    - htdocs:/usr/local/apache2/htdocs
+    - ./index.html:/usr/local/apache2/htdocs/index.html
 ```
 Em seguida, em um terminal, execute o seguinte comando:
 
